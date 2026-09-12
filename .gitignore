@@ -1,0 +1,45 @@
+# Dependencies (DO NOT UPLOAD)
+node_modules/
+*/node_modules/
+.venv/
+venv/
+env/
+ENV/
+
+# Python Cache & Builds
+__pycache__/
+*/__pycache__/
+*/**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# NestJS / TypeScript Builds
+dist/
+*/dist/
+*.tsbuildinfo
+
+# Environment & Secrets (Keys & Tokens)
+.env
+.env.local
+.env.*.local
+*.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.gemini/
+.system_generated/
+
+# Optional: SQLite runtime journal files
+*.sqlite-journal

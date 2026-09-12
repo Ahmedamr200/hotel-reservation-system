@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AuraNile Grand Resort & Spa - Five-Star Luxury Hospitality & Real-Time Guest Portal">
+    <title>AuraNile Grand Resort & Spa • Luxury Guest Portal</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<!-- ================= SVG ICON DEFINITIONS ================= -->
+<svg style="display: none;">
+    <defs>
+        <!-- Logo -->
+        <g id="icon-brand-crest">
+            <circle cx="24" cy="24" r="23" stroke="#D4AF37" stroke-width="1.5" fill="rgba(212,175,55,0.08)"/>
+            <path d="M12 28C16 22 20 34 24 28C28 22 32 34 36 28" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M24 10V18M18 13L24 18L30 13" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="24" cy="28" r="2" fill="#FEBB02"/>
+        </g>
+        <!-- Navigation Icons -->
+        <g id="icon-dashboard">
+            <rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2" fill="none"/>
+            <rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2" fill="none"/>
+            <rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2" fill="none"/>
+            <rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2" fill="none"/>
+        </g>
+        <g id="icon-bed">
+            <path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="9" cy="11" r="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        </g>
+        <g id="icon-calendar">
+            <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+            <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2"/>
+        </g>
+        <g id="icon-shield-check">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </g>
+        <g id="icon-sparkles">
+            <path d="M12 3v3m0 12v3M3 12h3m12 0h3M6.34 6.34l2.12 2.12m7.08 7.08l2.12 2.12M6.34 17.66l2.12-2.12m7.08-7.08l2.12-2.12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </g>
+        <g id="icon-search">
+            <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </g>
+        <g id="icon-user">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+        </g>
+        <g id="icon-lock">
+            <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </g>
+        <g id="icon-eye">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" fill="none"/>
+        </g>
+        <g id="icon-eye-off">
+            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <line x1="1" y1="1" x2="23" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </g>
+        <g id="icon-star">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/>
+        </g>
+        <g id="icon-map-pin">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" fill="none"/>
+        </g>
+        <g id="icon-wifi">
+            <path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </g>
+        <g id="icon-wind">
+            <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </g>
+        <g id="icon-coffee">
+            <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 1v3M10 1v3M14 1v3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </g>
+        <g id="icon-check">
+            <polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </g>
+        <g id="icon-x">
+            <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </g>
+        <g id="icon-logout">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <polyline points="16 17 21 12 16 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <line x1="21" y1="12" x2="9" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </g>
+        <g id="icon-heart">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </g>
+        <g id="icon-refresh">
+            <polyline points="23 4 23 10 17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </g>
+        <g id="icon-chat">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </g>
+        <g id="icon-info">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+            <line x1="12" y1="16" x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="12" y1="8" x2="12.01" y2="8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </g>
+        <g id="icon-arrow-right">
+            <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <polyline points="12 5 19 12 12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </g>
+    </defs>
+</svg>
+
+<div class="app-root">
+
+    <!-- ================= TOP LUXURY NAVIGATION (BOOKING / AIRBNB GRADE) ================= -->
+    <header class="navbar-luxury">
+        <div class="nav-container">
+            <!-- Brand & Logo -->
+            <div class="brand-wrapper" data-section="dashboard" role="button" tabindex="0" title="AuraNile Grand Resort & Spa">
+                <div class="brand-logo-crest">
+                    <svg class="logo-svg" viewBox="0 0 48 48"><use href="#icon-brand-crest"/></svg>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Aura<span>Nile</span></span>
+                    <span class="brand-subtitle">Grand Resort & Luxury Suites</span>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" aria-label="Main Navigation">
+                <button class="nav-item active" data-section="dashboard" aria-current="page">
+                    <svg class="nav-svg"><use href="#icon-dashboard"/></svg>
+                    <span>Dashboard</span>
+                </button>
+                <button class="nav-item" data-section="rooms">
+                    <svg class="nav-svg"><use href="#icon-bed"/></svg>
+                    <span>Suites & Rooms</span>
+                    <span class="nav-counter" id="navRoomsBadge">50</span>
+                </button>
+                <button class="nav-item" data-section="bookings">
+                    <svg class="nav-svg"><use href="#icon-calendar"/></svg>
+                    <span>My Bookings</span>
+                    <span class="nav-counter" id="navBookingsBadge">0</span>
+                </button>
+                <button class="nav-item" data-section="complaints">
+                    <svg class="nav-svg"><use href="#icon-shield-check"/></svg>
+                    <span>Guest Support</span>
+                    <span class="nav-counter" id="navComplaintsBadge">0</span>
+                </button>
+                <button class="nav-item nav-item-ai" data-section="assistant">
+                    <svg class="nav-svg"><use href="#icon-sparkles"/></svg>
+                    <span>AI Concierge</span>
+                    <span class="status-live-dot" title="AI Concierge Online"></span>
+                </button>
+            </nav>
+
+            <!-- User Auth / Profile Actions -->
+            <div class="nav-user-actions">
+                <div class="locale-pill" title="Language & Currency">
+                    <span>USD $</span>
+                    <span class="locale-divider">·</span>
+                    <span>EN</span>
+                </div>
+
+                <!-- Logged In State -->
+                <div id="userProfileArea" class="user-profile-widget hidden">
+                    <div class="user-avatar" id="navUserAvatar">A</div>
+                    <div class="user-info-text">
+                        <span class="user-name" id="navUserName">Guest User</span>
+                        <span class="user-tier">Verified Member</span>
+                    </div>
+                    <button id="logoutBtn" class="logout-btn" title="Sign out" aria-label="Logout">
+                        <svg class="btn-svg"><use href="#icon-logout"/></svg>
+                        <span>Sign Out</span>
+                    </button>
+                </div>
+
+                <!-- Logged Out State -->
+                <div id="authButtonsArea" class="auth-buttons-widget">
+                    <button id="navLoginBtn" class="btn-auth-login">Sign In</button>
+                    <button id="navRegisterBtn" class="btn-auth-register">Register</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= MAIN VIEW CONTAINER ================= -->
+    <main class="main-content-layout">
+
+        <!-- AIRBNB / BOOKING SEARCH CAPSULE BAR -->
+        <div class="hero-search-wrapper">
+            <div class="search-capsule-container">
+                <form id="globalSearchForm" class="search-capsule-bar" onsubmit="event.preventDefault(); applyGlobalSearch();">
+                    <!-- Location / Resort pod -->
+                    <div class="search-pod">
+                        <div class="pod-icon">
+                            <svg class="pod-svg"><use href="#icon-map-pin"/></svg>
+                        </div>
+                        <div class="pod-content">
+                            <span class="pod-label">Destination</span>
+                            <span class="pod-value">AuraNile Resort • Nile Vista, Luxor</span>
+                        </div>
+                    </div>
+
+                    <div class="search-divider"></div>
+
+                    <!-- Check-in Date pod -->
+                    <div class="search-pod">
+                        <div class="pod-icon">
+                            <svg class="pod-svg"><use href="#icon-calendar"/></svg>
+                        </div>
+                        <div class="pod-content">
+                            <label for="searchCheckIn" class="pod-label">Check-in</label>
+                            <input type="date" id="searchCheckIn" class="pod-input" required>
+                        </div>
+                    </div>
+
+                    <div class="search-divider"></div>
+
+                    <!-- Check-out Date pod -->
+                    <div class="search-pod">
+                        <div class="pod-icon">
+                            <svg class="pod-svg"><use href="#icon-calendar"/></svg>
+                        </div>
+                        <div class="pod-content">
+                            <label for="searchCheckOut" class="pod-label">Check-out</label>
+                            <input type="date" id="searchCheckOut" class="pod-input" required>
+                        </div>
+                    </div>
+
+                    <div class="search-divider"></div>
+
+                    <!-- Room Type / Guests pod -->
+                    <div class="search-pod">
+                        <div class="pod-icon">
+                            <svg class="pod-svg"><use href="#icon-bed"/></svg>
+                        </div>
+                        <div class="pod-content">
+                            <label for="searchRoomType" class="pod-label">Suite Type</label>
+                            <select id="searchRoomType" class="pod-select">
+                                <option value="ALL">All Suites & Rooms</option>
+                                <option value="Single">Single (1 Guest)</option>
+                                <option value="Double">Double (2 Guests)</option>
+                                <option value="Twin">Twin (2 Guests)</option>
+                                <option value="Suite">Royal Suite (4 Guests)</option>
+                                <option value="Family">Family Villa (5 Guests)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="button" class="btn-search-trigger" id="btnSearchRates" onclick="applyGlobalSearch()">
+                        <svg class="search-btn-svg"><use href="#icon-search"/></svg>
+                        <span>Search Rates</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+
+            <!-- ================= SECTION 1: DASHBOARD ================= -->
+            <section id="dashboard" class="page-section active-section">
+                <!-- Welcome Banner -->
+                <div class="welcome-luxury-card">
+                    <div class="welcome-content">
+                        <div class="hotel-stars-row">
+                            <div class="star-rating-icons">
+                                <svg class="star-gold"><use href="#icon-star"/></svg>
+                                <svg class="star-gold"><use href="#icon-star"/></svg>
+                                <svg class="star-gold"><use href="#icon-star"/></svg>
+                                <svg class="star-gold"><use href="#icon-star"/></svg>
+                                <svg class="star-gold"><use href="#icon-star"/></svg>
+                            </div>
+                            <span class="resort-tag">Five-Star Luxury Resort & Suites</span>
+                        </div>
+                        <h2>Unrivaled Nile Panorama & Bespoke Hospitality</h2>
+                        <p>
+                            Experience seamless reservation management, check verified live room rates, 
+                            track customer service requests with guaranteed 10% compensation, or inquire with our 24/7 intelligent concierge.
+                        </p>
+                        <div class="welcome-cta-row">
+                            <button class="btn-gold" data-section="rooms">
+                                <svg class="cta-svg"><use href="#icon-bed"/></svg>
+                                <span>Browse Available Rooms</span>
+                            </button>
+                            <button class="btn-outline-gold" data-section="assistant">
+                                <svg class="cta-svg"><use href="#icon-sparkles"/></svg>
+                                <span>Concierge Assistant</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="welcome-trust-badges">
+                        <div class="trust-badge-item">
+                            <span class="trust-score">9.8</span>
+                            <div class="trust-details">
+                                <strong>Exceptional</strong>
+                                <small>Over 1,200 Verified Reviews</small>
+                            </div>
+                        </div>
+                        <div class="trust-perk-row">
+                            <div class="perk-tag">
+                                <svg class="perk-svg"><use href="#icon-check"/></svg>
+                                <span>Best Rate Guarantee</span>
+                            </div>
+                            <div class="perk-tag">
+                                <svg class="perk-svg"><use href="#icon-check"/></svg>
+                                <span>Free Cancellation Options</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Overview Grid -->
+                <div class="luxury-stats-grid">
+                    <div class="lux-stat-card" data-section="rooms" role="button" tabindex="0">
+                        <div class="lux-stat-icon-wrap blue">
+                            <svg class="stat-svg"><use href="#icon-bed"/></svg>
+                        </div>
+                        <div class="lux-stat-info">
+                            <span class="lux-stat-label">Available Inventory</span>
+                            <strong class="lux-stat-value" id="availableCount">50</strong>
+                            <small class="stat-meta">Verified Live SQLite Catalog</small>
+                        </div>
+                    </div>
+
+                    <div class="lux-stat-card" data-section="bookings" role="button" tabindex="0">
+                        <div class="lux-stat-icon-wrap gold">
+                            <svg class="stat-svg"><use href="#icon-calendar"/></svg>
+                        </div>
+                        <div class="lux-stat-info">
+                            <span class="lux-stat-label">My Reservations</span>
+                            <strong class="lux-stat-value" id="bookingCount">0</strong>
+                            <small class="stat-meta">Manage active & past stays</small>
+                        </div>
+                    </div>
+
+                    <div class="lux-stat-card" data-section="complaints" role="button" tabindex="0">
+                        <div class="lux-stat-icon-wrap emerald">
+                            <svg class="stat-svg"><use href="#icon-shield-check"/></svg>
+                        </div>
+                        <div class="lux-stat-info">
+                            <span class="lux-stat-label">Feedback Tracker</span>
+                            <strong class="lux-stat-value" id="complaintCount">0</strong>
+                            <small class="stat-meta">10% Compensation Protected</small>
+                        </div>
+                    </div>
+
+                    <div class="lux-stat-card" data-section="assistant" role="button" tabindex="0">
+                        <div class="lux-stat-icon-wrap purple">
+                            <svg class="stat-svg"><use href="#icon-sparkles"/></svg>
+                        </div>
+                        <div class="lux-stat-info">
+                            <span class="lux-stat-label">AI Concierge</span>
+                            <strong class="lux-stat-value green-text">Online 24/7</strong>
+                            <small class="stat-meta">Real-time availability & rates</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Services Grid -->
+                <div class="section-title-row">
+                    <div>
+                        <h3>Explore Resort Services</h3>
+                        <p class="section-subtext">Direct shortcuts to all guest features and operations</p>
+                    </div>
+                </div>
+
+                <div class="services-action-grid">
+                    <div class="service-action-card" data-section="rooms" role="button" tabindex="0">
+                        <div class="service-card-top-icon">
+                            <svg class="service-svg"><use href="#icon-search"/></svg>
+                        </div>
+                        <h4>Verified Room Inventory</h4>
+                        <p>Browse high-definition photography, floor views, curated amenities, and transparent nightly rates.</p>
+                        <span class="service-card-link">
+                            <span>View Rooms</span>
+                            <svg class="link-arrow"><use href="#icon-arrow-right"/></svg>
+                        </span>
+                    </div>
+
+                    <div class="service-action-card" data-section="bookings" role="button" tabindex="0">
+                        <div class="service-card-top-icon">
+                            <svg class="service-svg"><use href="#icon-calendar"/></svg>
+                        </div>
+                        <h4>My Stay Itinerary</h4>
+                        <p>Access your personalized reservation history, review stay dates, or process real-time cancellations.</p>
+                        <span class="service-card-link">
+                            <span>Manage Bookings</span>
+                            <svg class="link-arrow"><use href="#icon-arrow-right"/></svg>
+                        </span>
+                    </div>
+
+                    <div class="service-action-card" data-section="complaints" role="button" tabindex="0">
+                        <div class="service-card-top-icon">
+                            <svg class="service-svg"><use href="#icon-shield-check"/></svg>
+                        </div>
+                        <h4>Feedback & Resolution</h4>
+                        <p>Submit inquiries and track real-time resolution stages with automatic 10% compensation discount.</p>
+                        <span class="service-card-link">
+                            <span>Open Tracker</span>
+                            <svg class="link-arrow"><use href="#icon-arrow-right"/></svg>
+                        </span>
+                    </div>
+
+                    <div class="service-action-card" data-section="assistant" role="button" tabindex="0">
+                        <div class="service-card-top-icon">
+                            <svg class="service-svg"><use href="#icon-sparkles"/></svg>
+                        </div>
+                        <h4>AI Pricing Calculator</h4>
+                        <p>Ask our intelligent assistant to calculate group rates, check live room dates, or book instantly.</p>
+                        <span class="service-card-link">
+                            <span>Ask AI Concierge</span>
+                            <svg class="link-arrow"><use href="#icon-arrow-right"/></svg>
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= SECTION 2: ROOMS (AIRBNB / BOOKING STYLE) ================= -->
+            <section id="rooms" class="page-section">
+                <!-- Filter Bar -->
+                <div class="rooms-filter-header">
+                    <div class="filter-left">
+                        <div class="pill-group" id="roomTypeFilters" role="tablist">
+                            <button class="filter-pill active" data-type="ALL" role="tab" aria-selected="true">All Suites & Rooms</button>
+                            <button class="filter-pill" data-type="Single" role="tab" aria-selected="false">Single</button>
+                            <button class="filter-pill" data-type="Double" role="tab" aria-selected="false">Double</button>
+                            <button class="filter-pill" data-type="Twin" role="tab" aria-selected="false">Twin</button>
+                            <button class="filter-pill" data-type="Suite" role="tab" aria-selected="false">Royal Suite</button>
+                            <button class="filter-pill" data-type="Family" role="tab" aria-selected="false">Family Villa</button>
+                        </div>
+                    </div>
+
+                    <div class="filter-right">
+                        <label for="floorFilter" class="filter-label">Level / Floor:</label>
+                        <select id="floorFilter" class="custom-select" aria-label="Filter by Floor">
+                            <option value="ALL">All Levels (1 - 5)</option>
+                            <option value="1">1st Floor • Garden Level</option>
+                            <option value="2">2nd Floor • Nile Vista</option>
+                            <option value="3">3rd Floor • Deluxe Terrace</option>
+                            <option value="4">4th Floor • Executive Club</option>
+                            <option value="5">5th Floor • Royal Penthouse</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Rooms Container -->
+                <div id="roomsContainer" class="luxury-rooms-list" aria-live="polite">
+                    <div class="empty-state-card">
+                        <div class="spinner-gold"></div>
+                        <h4>Loading resort inventory...</h4>
+                        <p>Fetching verified rooms and live rates directly from SQLite server.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= SECTION 3: BOOKINGS ================= -->
+            <section id="bookings" class="page-section">
+                <!-- Bookings Filter Bar -->
+                <div class="bookings-control-bar">
+                    <div class="bookings-tab-group" id="bookingStatusTabs">
+                        <button class="b-tab active" data-filter="ALL">All Reservations (<span id="countAllBookings">0</span>)</button>
+                        <button class="b-tab" data-filter="confirmed">Confirmed (<span id="countConfirmedBookings">0</span>)</button>
+                        <button class="b-tab" data-filter="cancelled">Cancelled (<span id="countCancelledBookings">0</span>)</button>
+                    </div>
+
+                    <button class="btn-gold-sm" data-section="rooms">
+                        <svg class="btn-icon-svg"><use href="#icon-bed"/></svg>
+                        <span>New Reservation</span>
+                    </button>
+                </div>
+
+                <!-- Bookings Container -->
+                <div id="bookingsContainer" class="bookings-container" aria-live="polite">
+                    <!-- Populated dynamically via script.js -->
+                </div>
+            </section>
+
+            <!-- ================= SECTION 4: COMPLAINTS & LIVE TRACKER ================= -->
+            <section id="complaints" class="page-section">
+                <div class="complaints-grid-layout">
+                    <!-- Left: Submission Form -->
+                    <div class="complaint-card-box">
+                        <div class="box-header">
+                            <div class="header-icon-wrap">
+                                <svg class="box-header-svg"><use href="#icon-shield-check"/></svg>
+                            </div>
+                            <div>
+                                <h3>Submit Guest Feedback</h3>
+                                <p>We resolve guest concerns promptly and guarantee a 10% compensation discount on your next stay.</p>
+                            </div>
+                        </div>
+
+                        <form id="complaintForm" class="complaint-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="complaintName">Full Guest Name</label>
+                                    <input type="text" id="complaintName" placeholder="Ahmed Amr" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="complaintContact">Phone or Email</label>
+                                    <input type="text" id="complaintContact" placeholder="ahmed@example.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="complaintReservationId">Associated Booking ID (Optional)</label>
+                                <input type="text" id="complaintReservationId" placeholder="e.g. 94497cdd-3d5e-404e-85e3-...">
+                            </div>
+
+                            <div class="form-field">
+                                <label>Concern Category</label>
+                                <div class="category-pills" id="complaintCategoryChips">
+                                    <button type="button" class="cat-chip selected" data-cat="room">Cleanliness</button>
+                                    <button type="button" class="cat-chip" data-cat="service">Front Desk & Service</button>
+                                    <button type="button" class="cat-chip" data-cat="food">Dining & Room Service</button>
+                                    <button type="button" class="cat-chip" data-cat="maintenance">Room Facilities & AC</button>
+                                    <button type="button" class="cat-chip" data-cat="billing">Billing & Invoicing</button>
+                                    <button type="button" class="cat-chip" data-cat="noise">Comfort & Environment</button>
+                                </div>
+                                <input type="hidden" id="complaintCategory" value="room">
+                            </div>
+
+                            <div class="form-field">
+                                <label for="complaintDescription">Description of Incident</label>
+                                <textarea id="complaintDescription" rows="4" placeholder="Please describe what happened so our management team can assist..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-gold-block" id="submitComplaintBtn">
+                                <svg class="btn-icon-svg"><use href="#icon-shield-check"/></svg>
+                                <span>Submit Feedback & Activate 10% Discount</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right: Live Feedback Horizontal Stage Tracker -->
+                    <div class="complaints-list-box">
+                        <div class="box-header-between">
+                            <div>
+                                <h3>Live Resolution Tracker</h3>
+                                <p>Real-time horizontal stage monitoring for all filed inquiries</p>
+                            </div>
+                            <span class="badge-count" id="complaintsCounterText">0 Recorded</span>
+                        </div>
+
+                        <div id="complaintsContainer" class="complaints-stage-list">
+                            <!-- Populated dynamically with Horizontal Stepper -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= SECTION 5: AI CONCIERGE CHAT ================= -->
+            <section id="assistant" class="page-section">
+                <div class="ai-assistant-layout">
+                    <!-- Chat Box -->
+                    <div class="chat-luxury-card">
+                        <!-- Chat Header -->
+                        <div class="chat-lux-header">
+                            <div class="chat-agent-info">
+                                <div class="ai-pulse-avatar">
+                                    <svg class="agent-avatar-svg"><use href="#icon-sparkles"/></svg>
+                                </div>
+                                <div>
+                                    <div class="ai-title-row">
+                                        <h4>AuraNile Concierge Assistant</h4>
+                                        <span class="badge-online">Online</span>
+                                    </div>
+                                    <p class="ai-subtitle">Integrated with real-time SQLite room availability & booking system</p>
+                                </div>
+                            </div>
+                            <button id="chatResetButton" class="btn-clear-chat" title="Reset chat session">
+                                <svg class="btn-icon-svg"><use href="#icon-refresh"/></svg>
+                                <span>Reset Chat</span>
+                            </button>
+                        </div>
+
+                        <!-- Chat Messages Container -->
+                        <div id="chatMessages" class="chat-messages-area" role="log" aria-live="polite">
+                            <!-- Bot Welcome -->
+                            <div class="msg-bubble bot">
+                                <div class="bubble-avatar">
+                                    <svg class="bubble-avatar-svg"><use href="#icon-sparkles"/></svg>
+                                </div>
+                                <div class="bubble-body">
+                                    <div class="bubble-sender">AuraNile Concierge</div>
+                                    <div class="bubble-text">
+                                        Welcome to <strong>AuraNile Grand Resort & Spa</strong>.
+                                        <br><br>
+                                        I am your 24/7 Concierge Assistant. I can help you check live room availability, calculate stay prices with group or compensation discounts, book rooms, cancel reservations, or file guest feedback.
+                                    </div>
+                                    <div class="quick-suggestion-chips">
+                                        <button class="chat-suggestion" data-prompt="What rooms are available for 2 guests from 2026-09-15 to 2026-09-18?">
+                                            <svg class="sug-svg"><use href="#icon-bed"/></svg>
+                                            <span>Check Availability</span>
+                                        </button>
+                                        <button class="chat-suggestion" data-prompt="Can you calculate the total stay price for Room 101 from 2026-09-15 to 2026-09-18?">
+                                            <svg class="sug-svg"><use href="#icon-calendar"/></svg>
+                                            <span>Calculate Stay Price</span>
+                                        </button>
+                                        <button class="chat-suggestion" data-prompt="Tell me about the resort amenities, pools, and Nile dining">
+                                            <svg class="sug-svg"><use href="#icon-info"/></svg>
+                                            <span>Resort Amenities</span>
+                                        </button>
+                                        <button class="chat-suggestion" data-prompt="I want to submit a complaint about the air conditioning">
+                                            <svg class="sug-svg"><use href="#icon-shield-check"/></svg>
+                                            <span>File a Complaint</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chat Input Box -->
+                        <div class="chat-input-wrapper">
+                            <label for="chatInput" class="sr-only">Chat message input</label>
+                            <textarea 
+                                id="chatInput" 
+                                rows="1" 
+                                placeholder="Ask about room availability, pricing discounts, bookings, or resort services..."
+                                aria-label="Type your message to AI Concierge"
+                            ></textarea>
+                            <button id="sendButton" class="btn-chat-send" title="Send message" aria-label="Send message">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- AI Capabilities Sidebar -->
+                    <div class="ai-features-sidebar">
+                        <div class="sidebar-box">
+                            <h4>Concierge Capabilities</h4>
+                            <div class="capability-item">
+                                <div class="cap-icon-wrap">
+                                    <svg class="cap-svg"><use href="#icon-search"/></svg>
+                                </div>
+                                <div>
+                                    <strong>Live Room Discovery</strong>
+                                    <p>Direct query to SQLite database verifying real-time date availability.</p>
+                                </div>
+                            </div>
+
+                            <div class="capability-item">
+                                <div class="cap-icon-wrap">
+                                    <svg class="cap-svg"><use href="#icon-star"/></svg>
+                                </div>
+                                <div>
+                                    <strong>Precedence Discount Engine</strong>
+                                    <p>Applies highest discount between Group rate (5-8%) and Complaint Compensation (10%).</p>
+                                </div>
+                            </div>
+
+                            <div class="capability-item">
+                                <div class="cap-icon-wrap">
+                                    <svg class="cap-svg"><use href="#icon-calendar"/></svg>
+                                </div>
+                                <div>
+                                    <strong>Direct Reservation</strong>
+                                    <p>Generates confirmed reservation IDs synced to your account.</p>
+                                </div>
+                            </div>
+
+                            <div class="capability-item">
+                                <div class="cap-icon-wrap">
+                                    <svg class="cap-svg"><use href="#icon-shield-check"/></svg>
+                                </div>
+                                <div>
+                                    <strong>Incident Tracking</strong>
+                                    <p>Logs complaints and tracks resolution through our 4-stage tracker.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Active Guest Context Card -->
+                        <div class="guest-context-box">
+                            <h4>Active Guest Session</h4>
+                            <div class="context-detail">
+                                <span>Guest:</span>
+                                <strong id="chatGuestName">Guest User</strong>
+                            </div>
+                            <div class="context-detail">
+                                <span>Email:</span>
+                                <strong id="chatGuestEmail">guest@auranile.com</strong>
+                            </div>
+                            <div class="context-detail">
+                                <span>Compensation Discount:</span>
+                                <strong id="chatGuestDiscount" class="gold-text">None (Standard Rate)</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+</div>
+
+<!-- ================= MULTI-STEP BOOKING MODAL (BOOKING.COM GRADE) ================= -->
+<div id="bookingModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modalBookingTitle">
+    <div class="modal-card">
+        <div class="modal-header-lux">
+            <div>
+                <span class="modal-badge-step" id="modalStepBadge">Reservation Guarantee</span>
+                <h3 id="modalBookingTitle">Complete Your Luxury Stay</h3>
+            </div>
+            <button id="closeModal" class="btn-modal-close" aria-label="Close modal">
+                <svg class="close-svg"><use href="#icon-x"/></svg>
+            </button>
+        </div>
+
+        <form id="bookingForm" class="modal-form-body">
+            <input type="hidden" id="selectedRoomId">
+            <input type="hidden" id="selectedRoomNumber">
+
+            <!-- Room Preview Banner -->
+            <div id="selectedRoomPreview" class="modal-room-preview">
+                <!-- Injected via JS -->
+            </div>
+
+            <!-- Date Inputs -->
+            <div class="modal-field-grid">
+                <div class="form-field">
+                    <label for="bookingCheckIn">Check-in Date <span class="required-star">*</span></label>
+                    <input id="bookingCheckIn" type="date" required>
+                </div>
+                <div class="form-field">
+                    <label for="bookingCheckOut">Check-out Date <span class="required-star">*</span></label>
+                    <input id="bookingCheckOut" type="date" required>
+                </div>
+            </div>
+
+            <!-- Price Breakdown Summary (Real Calculation) -->
+            <div class="price-calculation-summary" id="modalPriceSummary">
+                <div class="summary-line">
+                    <span>Base Rate:</span>
+                    <strong id="summaryBaseRate">$0 / night</strong>
+                </div>
+                <div class="summary-line">
+                    <span>Duration of Stay:</span>
+                    <strong id="summaryNights">1 night</strong>
+                </div>
+                <div class="summary-line discount-line hidden" id="summaryDiscountRow">
+                    <span>Complaint Compensation Discount:</span>
+                    <strong class="green-text" id="summaryDiscount">-10% Off</strong>
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-line total-line">
+                    <span>Total Guaranteed Price:</span>
+                    <strong class="total-price-text" id="summaryFinalTotal">$0</strong>
+                </div>
+            </div>
+
+            <!-- Guest Contact Details (Pre-filled from session) -->
+            <div class="guest-details-fieldset">
+                <span class="fieldset-title">Guest Contact Information</span>
+                <div class="modal-field-grid">
+                    <div class="form-field">
+                        <label for="customerName">Full Name <span class="required-star">*</span></label>
+                        <input id="customerName" type="text" placeholder="Ahmed Amr" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="customerEmail">Email Address <span class="required-star">*</span></label>
+                        <input id="customerEmail" type="email" placeholder="ahmed@example.com" required>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="customerPhone">Phone Number <span class="required-star">*</span></label>
+                    <input id="customerPhone" type="tel" placeholder="01149420409" required>
+                </div>
+            </div>
+
+            <div class="modal-actions-footer">
+                <button type="button" id="cancelModal" class="btn-modal-secondary">Cancel</button>
+                <button type="submit" id="confirmBookingSubmitBtn" class="btn-gold-submit">
+                    <svg class="btn-icon-svg"><use href="#icon-lock"/></svg>
+                    <span>Confirm & Guarantee Reservation</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- ================= AUTHENTICATION MODAL (MANDATORY PASSWORD ENFORCED) ================= -->
+<div id="authModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
+    <div class="modal-card auth-modal-card">
+        <div class="modal-header-lux">
+            <div>
+                <span class="modal-badge-step">AuraNile Guest Access</span>
+                <h3 id="authModalTitle">Sign In to Your Account</h3>
+            </div>
+            <button id="closeAuthModal" class="btn-modal-close" aria-label="Close modal">
+                <svg class="close-svg"><use href="#icon-x"/></svg>
+            </button>
+        </div>
+
+        <!-- Auth Tabs: Sign In / Register -->
+        <div class="auth-tab-row">
+            <button class="auth-tab-btn active" id="tabLoginBtn" type="button">Sign In (تسجيل الدخول)</button>
+            <button class="auth-tab-btn" id="tabRegisterBtn" type="button">Create Account (حساب جديد)</button>
+        </div>
+
+        <!-- Tab 1: Login Form (Mandatory Password) -->
+        <form id="loginForm" class="auth-form-body">
+            <div class="form-field">
+                <label for="loginEmail">Email Address / البريد الإلكتروني <span class="required-star">*</span></label>
+                <input type="email" id="loginEmail" placeholder="e.g. ahmed.hassan@example.com" required autocomplete="email">
+            </div>
+
+            <div class="form-field">
+                <label for="loginPassword">Password / كلمة المرور <span class="required-star">*</span></label>
+                <div class="input-password-wrapper">
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required autocomplete="current-password">
+                    <button type="button" class="btn-toggle-pwd" data-target="loginPassword" title="Show/Hide Password" aria-label="Toggle password visibility">
+                        <svg class="pwd-eye-svg"><use href="#icon-eye"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="auth-helper-row">
+                <small class="auth-tip">Sign in with your registered account to view your reservations & live status.</small>
+            </div>
+
+            <button type="submit" class="btn-gold-block" id="loginSubmitBtn">
+                <svg class="btn-icon-svg"><use href="#icon-lock"/></svg>
+                <span>Sign In to Portal</span>
+            </button>
+        </form>
+
+        <!-- Tab 2: Register Form (Mandatory Password & Confirmation) -->
+        <form id="registerForm" class="auth-form-body hidden">
+            <div class="form-field">
+                <label for="regName">Full Name / الاسم بالكامل <span class="required-star">*</span></label>
+                <input type="text" id="regName" placeholder="e.g. Ahmed Amr" required autocomplete="name">
+            </div>
+
+            <div class="form-field">
+                <label for="regEmail">Email Address / البريد الإلكتروني <span class="required-star">*</span></label>
+                <input type="email" id="regEmail" placeholder="e.g. ahmed@example.com" required autocomplete="email">
+            </div>
+
+            <div class="form-field">
+                <label for="regPhone">Phone Number / رقم الهاتف <span class="required-star">*</span></label>
+                <input type="tel" id="regPhone" placeholder="e.g. 01149420409" required autocomplete="tel">
+            </div>
+
+            <div class="form-field">
+                <label for="regPassword">Password / كلمة المرور <span class="required-star">*</span></label>
+                <div class="input-password-wrapper">
+                    <input type="password" id="regPassword" placeholder="Minimum 4 characters" minlength="4" required autocomplete="new-password">
+                    <button type="button" class="btn-toggle-pwd" data-target="regPassword" title="Show/Hide Password" aria-label="Toggle password visibility">
+                        <svg class="pwd-eye-svg"><use href="#icon-eye"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-field">
+                <label for="regPasswordConfirm">Confirm Password / تأكيد كلمة المرور <span class="required-star">*</span></label>
+                <div class="input-password-wrapper">
+                    <input type="password" id="regPasswordConfirm" placeholder="Re-enter password" minlength="4" required autocomplete="new-password">
+                    <button type="button" class="btn-toggle-pwd" data-target="regPasswordConfirm" title="Show/Hide Password" aria-label="Toggle password visibility">
+                        <svg class="pwd-eye-svg"><use href="#icon-eye"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-gold-block" id="registerSubmitBtn">
+                <svg class="btn-icon-svg"><use href="#icon-lock"/></svg>
+                <span>Create Account & Sign In</span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- ================= TOAST NOTIFICATIONS ================= -->
+<div id="toastContainer" class="toast-container-lux" aria-live="assertive"></div>
+
+<script src="/js/script.js"></script>
+
+</body>
+</html>
